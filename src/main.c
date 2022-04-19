@@ -25,22 +25,12 @@ int error_handling(int ac, char **av)
     return (0);
 }
 
-void display_char_solution(char **maze, int **matrix, int x, int y)
+void free_data(matrix_t *matrix_data, char **maze)
 {
-    if (matrix[y][x] == 1)
-        write(1, "o", 1);
-    else
-        write(1, &maze[y][x], 1);
-}
-
-void display_solution(char **maze, int **matrix, int x, int y)
-{
-    for (int rows = 0; rows < y; rows++) {
-        for (int cols = 0; cols < x; cols++) {
-            display_char_solution(maze, matrix, cols, rows);
-        }
-        write(1, "\n", 1);
-    }
+    free_str_tab(maze);
+    free_int_tab(matrix_data->matrix, matrix_data->nb_rows);
+    free_int_tab(matrix_data->sol_matrix, matrix_data->nb_rows);
+    free(matrix_data);
 }
 
 int main(int ac, char **av)
@@ -64,5 +54,6 @@ int main(int ac, char **av)
     maze_solver(matrix_data);
     display_solution(maze, matrix_data->sol_matrix, matrix_data->nb_cols,
                         matrix_data->nb_rows);
+    free_data(matrix_data, maze);
     return (0);
 }

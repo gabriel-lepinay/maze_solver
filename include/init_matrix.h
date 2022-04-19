@@ -13,5 +13,4 @@
     #include <string.h>
 
 int my_strlen(char const *str);
-
 #endif /*IMAT_H_*/

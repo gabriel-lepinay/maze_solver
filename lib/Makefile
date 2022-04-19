@@ -15,7 +15,9 @@ SRC =	fonctions/my_putchar.c		\
 		fonctions/next_char.c		\
 		fonctions/get_content.c		\
 		fonctions/write_error.c		\
-		fonctions/my_realloc.c
+		fonctions/my_realloc.c		\
+		fonctions/free_str_tab.c 	\
+		fonctions/free_int_tab.c 	
 
 NAME =	libmy.a
 

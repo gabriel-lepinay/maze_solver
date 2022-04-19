@@ -9,7 +9,8 @@ SRC = 	src/main.c				\
 		src/get_content_file.c	\
 		src/init_matrix.c		\
 		src/fill_matrix.c		\
-		src/maze_solver.c
+		src/maze_solver.c		\
+		src/display.c
 
 NAME = solver
 

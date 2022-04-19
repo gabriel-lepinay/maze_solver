@@ -8,7 +8,7 @@
 
 int error_handling_maze(char **maze, int rows, int cols)
 {
-    if (maze[0][0] != '*' || maze[rows - 1][cols - 1] != '*') {
+    if (maze[0][0] != '.' || maze[rows - 1][cols - 1] != '.') {
         return (1);
     }
     return (0);

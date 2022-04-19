@@ -12,7 +12,5 @@
     #include <stdio.h>
 
 int my_putstr(char const *str);
-
 int write_error(char const *str);
-
 #endif /*FMAT_H_*/

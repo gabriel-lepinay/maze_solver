@@ -22,5 +22,6 @@ char **get_content_file(char *pathname)
     if (count_char(buff, '\n') < 1)
         return (NULL);
     content = my_split(buff, '\n');
+    free(buff);
     return (content);
 }

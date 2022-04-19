@@ -11,13 +11,10 @@
     #include <sys/types.h>
     #include <sys/stat.h>
     #include <fcntl.h>
+    #include <stdlib.h>
 
 char **my_split(char *str, char splitter);
-
 char *get_content(int fd);
-
 int write_error(char const *str);
-
 int count_char(char *str, char c);
-
 #endif /*GCONT_H_*/

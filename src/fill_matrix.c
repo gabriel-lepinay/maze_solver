@@ -8,9 +8,9 @@
 
 int fill_char(char **maze, int row, int col)
 {
-    if (maze[row][col] == '*')
+    if (maze[row][col] == '.')
         return (1);
-    else if (maze[row][col] == 'X')
+    else if (maze[row][col] == '#')
         return (0);
     else
         return (-1);
